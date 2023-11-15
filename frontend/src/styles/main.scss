@@ -1,15 +1,19 @@
 @import url('./header.scss');
 @import url('./aside.scss');
 @import url('./images.scss');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quicksand:wght@300&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans';
 }
 
 main {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 700px;
+    gap: 2px;
+    grid-template-columns: 1fr 600px;
 }

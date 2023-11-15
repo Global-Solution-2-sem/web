@@ -1,4 +1,17 @@
 aside {
     display: flex;
     flex-direction: column;
+    padding: 15px;
+
+    div {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    p {
+        width: 65%;
+    }
 }
