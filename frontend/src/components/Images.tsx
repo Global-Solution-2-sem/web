@@ -1,6 +1,6 @@
 export default function Images() {
     return (
-        <section>
+        <section className="images-container">
             <figure>
                 <div className="main-image"></div>
             </figure>

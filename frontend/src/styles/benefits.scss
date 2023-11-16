@@ -1,0 +1,40 @@
+section.benefits-container {
+    width: 100%;
+    height: 28vh;
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+        width: 100%;
+        font-size: 24px;
+        display: block;
+    }
+
+    .benefits-card-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 30px;
+    }
+
+    .benefit-card {
+        width: 30%;
+        display: flex;
+        gap: 10px;
+
+        .image {
+            width: 60%;
+            height: 100%;
+            background-color: #000;
+        }
+
+
+        .benefit-text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
