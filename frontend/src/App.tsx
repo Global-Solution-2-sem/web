@@ -12,8 +12,8 @@ export default function App() {
       <main>
         <Images />
         <Application />
+        <Benefits />
       </main>
-      <Benefits />
     </>
   )
 }
