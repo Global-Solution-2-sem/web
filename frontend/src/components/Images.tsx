@@ -12,6 +12,9 @@ export default function Images() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nisi autem atque voluptate quo aliquid, odit laborum, harum earum eligendi debitis maiores! Cupiditate laboriosam, consequatur magnam omnis qui provident facere.</p>
                 </div>
             </div>
+            <div className="link-container">
+                <a href="">Mais informações</a>
+            </div>
         </section>
     )
 }

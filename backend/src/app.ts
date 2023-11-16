@@ -12,22 +12,21 @@ const users = [
         id: "f06ca828-966c-47bd-bcae-d8adb47cef5d",
         name: "admin",
         email: "admin@admin",
-        password: "admin" 
+        password: "admin"
     }
 ]
 
-
-app.post('/login', async function (req,reply) {
-    const {email, password} = req.body as {email: string, password: string}
+app.post('/login', async function (req, reply) {
+    const { email, password } = req.body as { email: string, password: string }
 
     const userExists = users.find(user => user.email === email)
 
-    if(userExists === undefined){
-        reply.status(400).send({message: 'Usuário não encontrado'})
+    if (userExists === undefined) {
+        reply.status(400).send({ message: 'Usuário não encontrado' })
     }
 
-    if(userExists?.password !== password){
-        reply.status(400).send({message: 'Usuário ou senha inválidos'})
+    if (userExists?.password !== password) {
+        reply.status(400).send({ message: 'Usuário ou senha inválidos' })
     }
 
     const token = app.jwt.sign(
@@ -41,7 +40,7 @@ app.post('/login', async function (req,reply) {
         }
     )
 
-    reply.status(200).send({token})
+    reply.status(200).send({ token })
 
 })
 
