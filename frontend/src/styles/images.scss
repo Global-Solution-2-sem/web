@@ -1,8 +1,28 @@
 section {
+    padding: 3px;
+    height: 100%;
+
+    div {
+        display: flex;
+        height: 35%;
+        gap: 2px;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            width: 15%;
+        }
+
+        .text-container {
+            padding: 15px;
+            text-align: center;
+
+        }
+    }
 
     .main-image {
         background-color: black;
         width: 100%;
-        height: 40vh;
+        height: 320px;
     }
 }
