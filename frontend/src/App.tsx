@@ -1,19 +1,20 @@
-import Application from "./components/Application";
-import Benefits from "./components/Benefits";
+
 import Header from "./components/Header";
-import Images from "./components/Images";
-import './styles/main.scss'
+import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from "./components/Login";
 
 export default function App() {
 
   return (
     <>
-      <Header />
-      <main>
-        <Images />
-        <Application />
-        <Benefits />
-      </main>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
