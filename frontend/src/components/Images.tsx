@@ -1,9 +1,7 @@
 export default function Images() {
     return (
         <section className="images-container">
-            <figure>
-                <div className="main-image"></div>
-            </figure>
+            <div className="main-image"></div>
             <div>
                 <h2>
                     Nome da aplicação criada

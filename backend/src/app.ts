@@ -1,10 +1,15 @@
 import fastify from 'fastify'
 import jwt from '@fastify/jwt'
+import cors from '@fastify/cors'
 
 const app = fastify()
 
 app.register(jwt, {
     secret: 'AULA-DE-JS'
+})
+
+app.register(cors, {
+    origin: true
 })
 
 const users = [
@@ -16,7 +21,7 @@ const users = [
     }
 ]
 
-app.post('/login', async function (req, reply) {
+app.post('/auth', async function (req, reply) {
     const { email, password } = req.body as { email: string, password: string }
 
     const userExists = users.find(user => user.email === email)
