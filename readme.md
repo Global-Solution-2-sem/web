@@ -22,7 +22,7 @@
     npm run dev
 ```
 
-4. Para logar, utilize>
+4. Para logar, utilize:
 
 ```
     usuário = admin
