@@ -20,8 +20,8 @@ export default function Login() {
         }
     }
     return (
-        <main>
-            <section>
+        <main className='login-main'>
+            <section className='login-container'>
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className="input-item">
                         <label htmlFor="user">Usuário</label>
