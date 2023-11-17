@@ -10,8 +10,15 @@ header {
         font-weight: 700;
     }
 
-    p {
-        font-size: 18px;
-        padding: 0 5px;
+    nav {
+
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+        p {
+            font-size: 18px;
+            padding: 0 5px;
+        }
     }
 }

@@ -2,9 +2,11 @@ import axios from 'axios';
 import '../styles/login.scss';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const { register, handleSubmit } = useForm()
+    const navigate = useNavigate()
     const [errorMessage, setErrorMessage] = useState<string>()
 
     /*eslint-disable */
@@ -14,6 +16,7 @@ export default function Login() {
             const response = await axios.post('http://localhost:5000/auth', data)
 
             localStorage.setItem('token', response.data.token)
+            navigate('/home')
         }
         catch (err: any) {
             setErrorMessage(err.response.data.message)
