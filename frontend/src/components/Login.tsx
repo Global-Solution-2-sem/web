@@ -28,7 +28,7 @@ export default function Login() {
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <div className="input-item">
                         <label htmlFor="user">Usuário</label>
-                        <input type="text" id='user' {...register("email")} />
+                        <input type="text" id='user' {...register("user")} />
                     </div>
 
                     <div className="input-item">

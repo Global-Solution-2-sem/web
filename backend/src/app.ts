@@ -2,6 +2,13 @@ import fastify from 'fastify'
 import jwt from '@fastify/jwt'
 import cors from '@fastify/cors'
 
+type user = {
+    id: string,
+    user: string,
+    email: string,
+    password: string
+}
+
 const app = fastify()
 
 app.register(jwt, {
@@ -12,19 +19,19 @@ app.register(cors, {
     origin: true
 })
 
-const users = [
+const users: user[] = [
     {
         id: "f06ca828-966c-47bd-bcae-d8adb47cef5d",
-        name: "admin",
+        user: "admin",
         email: "admin@admin",
         password: "admin"
     }
 ]
 
 app.post('/auth', async function (req, reply) {
-    const { email, password } = req.body as { email: string, password: string }
+    const { user, password } = req.body as { user: string, password: string }
 
-    const userExists = users.find(user => user.email === email)
+    const userExists = users.find(u => u.user === user)
 
     if (userExists === undefined) {
         reply.status(400).send({ message: 'Usuário não encontrado' })
@@ -36,7 +43,7 @@ app.post('/auth', async function (req, reply) {
 
     const token = app.jwt.sign(
         {
-            name: userExists!.name,
+            name: userExists!.user,
             email: userExists!.email,
         },
         {

@@ -3,7 +3,6 @@ import { LogOut } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-
 type userToken = {
     name: string
     email: string
