@@ -2,16 +2,16 @@ export default function Images() {
     return (
         <section className="images-container">
             <div className="main-image"></div>
-            <div>
-                <h2>
-                    Nome da aplicação criada
-                </h2>
-                <div className="text-container">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nisi autem atque voluptate quo aliquid, odit laborum, harum earum eligendi debitis maiores! Cupiditate laboriosam, consequatur magnam omnis qui provident facere.</p>
+            <div className="info-container">
+                <div className="title-container">
+                    <h2>Histório Médico invidual</h2>
                 </div>
-            </div>
-            <div className="link-container">
-                <a href="">Mais informações</a>
+                <div className="link-container">
+                    <div className="text-container">
+                        <p>Usma solução revolucionária para gerenciamento de saúde. Simplifica o histórico médico, promove diagnósticos precisos e facilita a comunicação entre pacientes e profissionais de saúde.</p>
+                    </div>
+                    <a href="" className="link">Mais informações</a>
+                </div>
             </div>
         </section>
     )

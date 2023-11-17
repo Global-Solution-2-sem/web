@@ -1,12 +1,20 @@
-export default function BenefitsCard() {
+type cardProps = {
+    image: string
+    title: string
+    text: string
+    index: number
+    alt: string
+}
+
+export default function BenefitsCard({ image, title, text, index, alt }: cardProps) {
     return (
         <div className="benefit-card">
-            <div className="image"></div>
+            <img src={image} className="image" alt={alt} />
             <div className="benefit-text-container">
-                <h3>01</h3>
+                <h3>{index + 1}</h3>
                 <div className="benefit-card-info">
-                    <h4>Lorem ipson dolor</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, minima.</p>
+                    <h4>{title}</h4>
+                    <p>{text}</p>
                 </div>
             </div>
         </div>
